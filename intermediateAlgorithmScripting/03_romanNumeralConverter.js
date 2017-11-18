@@ -7,60 +7,58 @@ function convertToRoman(num) {
         ones: { one: "I", five: "V" },
         tens: { one: "X", five: "L" },
         hundreds: { one: "C", five: "D" },
-        thousands: { one: "I", five: "'V'" }
+        thousands: { one: "M", five: "V" },
     }
+    numerals.ten_thousands = numerals.tens
+    numerals.hundred_thousands = numerals.hundreds
+    numerals.millions = numerals.thousands
 
     let convert = (digit, place) => {
         let one, two, three, four, five, six, seven, eight, nine, next;
         let getNext = {
             ones: "tens",
             tens: "hundreds",
-            hundreds: "thousands"
+            hundreds: "thousands",
+            thousands: "ten_thousands",
+            ten_thousands: "hundred_thousands",
+            hundred_thousands: "millions",
         }
         one = numerals[place].one;
-        two = one + one;
-        three = two + one;
         five = numerals[place].five;
-        four = one + five;
-        six = five + one;
-        seven = five + two;
-        eight = five + three;
-        // next = numerals.[getNext[place]].one
-        next = numerals[ getNext[place] ]
-        nine = one + next;
+        next = numerals[ getNext[place] ].one
         let getSwitch = (digit) => {
             switch(digit) {
                 case '0':
                     return "";
                 case '1':
-                    return one;
+                    return one
                 case '2':
-                    return two;
+                    return one + one
                 case '3':
-                    return three;
+                    return one + one + one
                 case '4':
-                    return four;
+                    return one + five
                 case '5':
-                    return five;
+                    return five
                 case '6':
-                    return six;
+                    return five + one
                 case '7':
-                    return seven;
+                    return five + one + one
                 case '8':
-                    return eight;
+                    return five + one + one + one
                 case '9':
-                    return nine;
+                    return one + next
                 default:
                     console.log("error in switch", digit)
             }
         }
         return getSwitch(digit);
     }
-    let getPlace = (i, l) => {
-        let places = ["thousands","hundreds","tens","ones"]
-        return places[4-l]
+    let getPlace = (i) => {
+        let places = ["thousands","hundreds","tens","ones"].reverse()
+        return places[i]
     }
-    return num.toString().split('').map((digit, index, arr)=>convert(digit, getPlace(index, arr.length))).join('')
+    return num.toString().split('').reverse().map((digit, index)=>convert(digit, getPlace(index))).reverse().join('')
 }
 
-convertToRoman(36);
+console.log( convertToRoman(36) )
