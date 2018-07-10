@@ -3,8 +3,8 @@
 // Falsy values in JavaScript are false, null, 0, "", undefined, and NaN.
 
 /* my original answer */
-
-function bouncer(arr) {
-  return arr.filter(Boolean);
+const bouncer = arr =>
+  arr.filter(Boolean)
   // return arr.filter(el => el); also works
-}
+
+console.log(bouncer(['',' ',1,0,false,null,undefined]))
