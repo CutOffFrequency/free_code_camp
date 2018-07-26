@@ -32,8 +32,10 @@
 
 /* solutiion using reduce */
 
-function sumAll(arr) {
-  const start = Math.min(...arr);
-  const stop = Math.max(...arr) + 1; 
-  return [...Array(stop-start).keys()].reduce((a, b) => a+b+start, 0);
+const sumAll = arr => {
+  let start = Math.min(...arr);
+  let stop = Math.max(...arr) + 1;
+  return [ ...Array(stop - start).keys() ].reduce( (a, b) => a + b + start, 0)
 }
+
+console.log(sumAll([2,4]))
