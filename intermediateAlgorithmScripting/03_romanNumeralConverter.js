@@ -2,7 +2,6 @@
 // All roman numerals answers should be provided in upper-case.
 
 let valueToConvert = process.argv[2];
-console.log("converting: ", valueToConvert);
 
 let convertToRoman = num => {
   let numerals = {
