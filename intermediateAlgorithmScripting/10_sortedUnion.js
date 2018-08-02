@@ -21,8 +21,8 @@ function uniteUnique(arr) {
 }
 console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));
 
-// the solution below  is of course more concise so I have updated it
-// HOWEVER
+// the solution below  is of course more concise so I have included it
+// HOWEVER,
 // the solution below yeilds a result with unique numerical values for each
 // arguments array presented for this challenge only because the arguments arrays
 // presented do not contain duplicate values at different depths!
@@ -30,6 +30,7 @@ console.log(uniteUnique([1, 3, 2], [5, 2, 1, 4], [2, 1]));
 // uniteUnique([1, 3, 2], [[5], 2, 1, 4], [2, 1, 5]))
 // would yield a result with values: 5 & [5] which are of course, not unique values
 // according to my original interpretation of the challenge
+// ALSO it doesn't work in node...
 
 // let uniteUnique = arr => {
 //   const args = [].concat(...arguments);
