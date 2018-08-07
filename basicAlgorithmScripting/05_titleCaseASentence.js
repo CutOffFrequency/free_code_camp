@@ -28,10 +28,14 @@
 
 /* better answer */
 const titleCase = str => {
-    return str.toLowerCase().split(' ').map( (word) => {
-        return word.replace( word[0], word[0].toUpperCase() )
-        // return ( word.charAt(0).toUpperCase() + word.slice(1) ) also works
-    }).join(' ')
-}
+  return str
+    .toLowerCase()
+    .split(" ")
+    .map(word => {
+      return word.replace(word[0], word[0].toUpperCase());
+      // return ( word.charAt(0).toUpperCase() + word.slice(1) ) also works
+    })
+    .join(" ");
+};
 
-console.log( titleCase("I'm a little tea pot") )
+console.log(titleCase("I'm a little tea pot"));

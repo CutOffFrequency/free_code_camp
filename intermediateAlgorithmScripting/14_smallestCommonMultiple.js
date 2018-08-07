@@ -20,7 +20,7 @@
 // this solution is more optimal for longer ranges as it only checks for divisibility
 // by prime factors
 
-function smallestCommons(arr) {
+const smallestCommons = arr => {
   // calculate range of terms from argument array
   let min = Math.min(...arr),
     values = [],
@@ -62,7 +62,7 @@ function smallestCommons(arr) {
       return final.concat([prime ** highest]);
     }, [])
     .reduce((a, b) => a * b);
-}
+};
 
 console.log(smallestCommons([1, 10]));
 

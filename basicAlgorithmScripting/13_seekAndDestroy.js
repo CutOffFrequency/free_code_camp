@@ -9,7 +9,6 @@
 // }
 
 /* my solution is better */
-const destroyer = (arr, ...args) =>
-  arr.filter(val => ! args.includes(val) )
+const destroyer = (arr, ...args) => arr.filter(val => !args.includes(val));
 
-console.log( destroyer([1, 2, 3, 1, 2, 3], 2, 3) )
+console.log(destroyer([1, 2, 3, 1, 2, 3], 2, 3));

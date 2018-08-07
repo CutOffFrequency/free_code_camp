@@ -2,7 +2,6 @@
 
 // The lowest number will not always come first.\
 
-
 /* my original solution */
 
 // function sumAll(arr) {
@@ -16,7 +15,6 @@
 
 //   return total;
 // }
-
 
 /* my original solution */
 
@@ -35,7 +33,7 @@
 const sumAll = arr => {
   let start = Math.min(...arr);
   let stop = Math.max(...arr) + 1;
-  return [ ...Array(stop - start).keys() ].reduce( (a, b) => a + b + start, 0)
-}
+  return [...Array(stop - start).keys()].reduce((a, b) => a + b + start, 0);
+};
 
-console.log(sumAll([2,4]))
+console.log(sumAll([2, 4]));

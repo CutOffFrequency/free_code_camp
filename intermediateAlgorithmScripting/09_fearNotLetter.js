@@ -1,4 +1,4 @@
-let fearNotLetter = str => {
+const fearNotLetter = str => {
   let missing;
   str.split("").map((a, b, c) => {
     if (missing || b == c.length - 1) return;

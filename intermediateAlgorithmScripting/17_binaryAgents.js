@@ -1,4 +1,4 @@
-let binaryAgent = str =>
+const binaryAgent = str =>
   str
     .split(" ")
     .map(a => String.fromCharCode(parseInt(a, 2)))

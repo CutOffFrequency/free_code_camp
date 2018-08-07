@@ -20,8 +20,10 @@
 // }
 
 /* better solution */
-const mutation = (arr) =>
-    arr[1].toLowerCase().split('').every( (letter) =>
-        arr[0].toLowerCase().indexOf(letter) !== -1 )
+const mutation = arr =>
+  arr[1]
+    .toLowerCase()
+    .split("")
+    .every(letter => arr[0].toLowerCase().indexOf(letter) !== -1);
 
-console.log( mutation(["hello","he"]) )
+console.log(mutation(["hello", "he"]));

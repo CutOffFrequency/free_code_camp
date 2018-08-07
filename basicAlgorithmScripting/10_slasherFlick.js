@@ -3,7 +3,6 @@
 // The head means the beginning of the array, or the zeroth index.
 
 /* my original answer */
-const slasher = (arr, howMany) =>
-    return arr.splice(0, howMany)
+const slasher = (arr, howMany) => arr.splice(0, howMany);
 
-slasher( [0,1,2], 1 )
+slasher([0, 1, 2], 1);

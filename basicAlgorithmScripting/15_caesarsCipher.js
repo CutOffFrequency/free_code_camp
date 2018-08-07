@@ -22,13 +22,13 @@
 //   return str.join(" ");
 // }
 
-
 /* improved solution */
 
 const rot13 = str => {
-  let toAdd = (s) => s.charCodeAt(0) > 97 ? 91 : 65;
+  let toAdd = s => (s.charCodeAt(0) > 97 ? 91 : 65);
   return str.replace(/[a-zA-Z]/g, L =>
-      String.fromCharCode( (L.charCodeAt(0) % 26) + toAdd(L) ))
-}
+    String.fromCharCode((L.charCodeAt(0) % 26) + toAdd(L))
+  );
+};
 
-console.log( rot13('LBH QVQ VG!') )
+console.log(rot13("LBH QVQ VG!"));

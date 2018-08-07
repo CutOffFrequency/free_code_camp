@@ -22,8 +22,9 @@
 //     )
 // }
 
-let diffArray = (arr1, arr2) =>
-    arr1.filter( el => ! arr2.includes(el) )
-        .concat( arr2.filter( el => ! arr1.includes(el) ) )
+const diffArray = (arr1, arr2) =>
+  arr1
+    .filter(el => !arr2.includes(el))
+    .concat(arr2.filter(el => !arr1.includes(el)));
 
-console.log(diffArray([1,2],[2,3]))
+console.log(diffArray([1, 2], [2, 3]));

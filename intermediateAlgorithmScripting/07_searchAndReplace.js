@@ -1,4 +1,4 @@
-let myReplace = (str, before, after) =>
+const myReplace = (str, before, after) =>
   str.replace(
     before,
     before.charAt(0) == before.charAt(0).toUpperCase()

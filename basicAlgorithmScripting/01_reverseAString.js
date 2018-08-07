@@ -18,8 +18,6 @@
 
 /* best imho */
 const recursiveReverseString = str =>
-    (str !== '') ?
-        recursiveReverseString( str.substr(1) ) + str.charAt(0) :
-        ''
+  str !== "" ? recursiveReverseString(str.substr(1)) + str.charAt(0) : "";
 
-console.log( recursiveReverseString('hello') )
+console.log(recursiveReverseString("hello"));

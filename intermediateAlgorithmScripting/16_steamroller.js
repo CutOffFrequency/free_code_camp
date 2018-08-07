@@ -1,4 +1,4 @@
-let steamrollArray = arr => {
+const steamrollArray = arr => {
   let flatten = arr =>
     arr.reduce((a, b) => a.concat(Array.isArray(b) ? flatten(b) : b), []);
   return flatten(arr);

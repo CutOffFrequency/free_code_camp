@@ -4,8 +4,8 @@
 
 /* my original answer */
 const confirmEnding = (str, target) =>
-    str.substr(-target.length) === target ? true : false
-    // return str.substr(-target.length) is more succinct
-    // return string.endsWith(target) also works
+  str.substr(-target.length) === target ? true : false;
+// return str.substr(-target.length) is more succinct
+// return string.endsWith(target) also works
 
-console.log( confirmEnding("Bastian", "n") )
+console.log(confirmEnding("Bastian", "n"));

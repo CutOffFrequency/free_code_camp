@@ -1,4 +1,4 @@
-function dropElements(arr, func) {
+const dropElements = (arr, func) => {
   let i = 0,
     p = -1;
   while (i < arr.length - 1) {
@@ -9,7 +9,7 @@ function dropElements(arr, func) {
     i++;
   }
   return p < 0 ? [] : arr.slice(p);
-}
+};
 
 console.log(
   dropElements([1, 2, 3], function(n) {

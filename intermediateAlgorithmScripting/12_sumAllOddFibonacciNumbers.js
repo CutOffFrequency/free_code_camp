@@ -1,4 +1,4 @@
-let sumFibs = num => {
+const sumFibs = num => {
   let calcFibs = (limit, seq) => {
     while (seq[seq.length - 1] + seq[seq.length - 2] <= limit) {
       seq.push(seq[seq.length - 1] + seq[seq.length - 2]);

@@ -1,4 +1,4 @@
-let truthCheck = (collection, pre) => {
+const truthCheck = (collection, pre) => {
   return collection.every(el => (el[pre] ? true : false));
 };
 

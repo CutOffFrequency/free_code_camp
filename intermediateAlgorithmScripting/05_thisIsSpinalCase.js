@@ -1,4 +1,4 @@
-let spinalCase = str =>
+const spinalCase = str =>
   str.split("").reduce((a, b, c, d) => {
     return (
       a +

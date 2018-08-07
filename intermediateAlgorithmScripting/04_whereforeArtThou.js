@@ -4,7 +4,7 @@
 // present in the object from the collection if it is to be included in the
 // returned array.
 
-function whatIsInAName(collection, source) {
+const whatIsInAName = (collection, source) => {
   var arr = [];
 
   let sourceKeys = Object.keys(source);
@@ -14,7 +14,7 @@ function whatIsInAName(collection, source) {
   );
 
   return arr;
-}
+};
 
 console.log(
   whatIsInAName([{ a: 1, b: 2 }, { a: 1, b: 3 }, { b: 3 }], { a: 1 })

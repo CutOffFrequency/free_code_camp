@@ -6,18 +6,17 @@
 
 // For example: 5! = 1 * 2 * 3 * 4 * 5 = 120
 
-
 const factorialize = num => {
-    let final = num >= 0 ? 1 : -1
-    if (num > 0) {
-        for ( let i = num; i > 1; i -= 1) {
-            final = final * i
-        }
+  let final = num >= 0 ? 1 : -1;
+  if (num > 0) {
+    for (let i = num; i > 1; i -= 1) {
+      final = final * i;
     }
-    return final
-}
+  }
+  return final;
+};
 
-console.log( factorialize(5) )
+console.log(factorialize(5));
 
 // why am I not using recursion?
 

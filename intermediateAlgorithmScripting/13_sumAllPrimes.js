@@ -1,4 +1,4 @@
-function sumPrimes(num) {
+const sumPrimes = num => {
   let primes = [2],
     p = 3;
   if (num < 2) return 0;
@@ -15,5 +15,5 @@ function sumPrimes(num) {
     p += 2;
   }
   return primes.reduce((a, b) => a + b);
-}
+};
 console.log(sumPrimes(10));

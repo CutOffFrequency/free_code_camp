@@ -29,9 +29,12 @@
 /* better solution */
 const palindrome = str => {
   let regex = /[\W_]/g;
-  let lowRegStr = str.toLowerCase().replace(regex, '');
-  let reverseStr = lowRegStr.split('').reverse().join('');
+  let lowRegStr = str.toLowerCase().replace(regex, "");
+  let reverseStr = lowRegStr
+    .split("")
+    .reverse()
+    .join("");
   return reverseStr === lowRegStr;
-}
+};
 
-console.log( palindrome("eye") )
+console.log(palindrome("eye"));

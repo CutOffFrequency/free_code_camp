@@ -1,6 +1,6 @@
-let orbitalPeriod = arr => {
-  var GM = 398600.4418;
-  var earthRadius = 6367.4447;
+const orbitalPeriod = arr => {
+  let GM = 398600.4418;
+  let earthRadius = 6367.4447;
   return arr.reduce((a, b) => {
     return a.concat([
       {

@@ -1,4 +1,4 @@
-let convertHTML = str =>
+const convertHTML = str =>
   str.split("").reduce((a, b) => {
     return (
       a +

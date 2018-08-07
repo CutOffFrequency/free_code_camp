@@ -3,7 +3,7 @@
 
 let valueToConvert = process.argv[2];
 
-let convertToRoman = num => {
+const convertToRoman = num => {
   let numerals = {
     ones: { one: "i", five: "v" },
     tens: { one: "x", five: "l" },
@@ -30,12 +30,12 @@ let convertToRoman = num => {
     return places[places.indexOf(current) + 1];
   };
 
-  let convert = (digit, place) => {
+  const convert = (digit, place) => {
     let one, two, three, four, five, six, seven, eight, nine, next;
     one = numerals[place].one;
     five = numerals[place].five;
     next = place === "millions" ? "n/a" : numerals[getNext(place)].one;
-    let translate = digit => {
+    const translate = digit => {
       switch (digit) {
         case "0":
           return "";

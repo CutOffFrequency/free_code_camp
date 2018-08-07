@@ -41,6 +41,6 @@
 
 /* best answer */
 const repeatStringNumTimes = (string, times) =>
-    times > 0 ? string.repeat(times) : ""
+  times > 0 ? string.repeat(times) : "";
 
-console.log( repeatStringNumTimes('CAR', 5) )
+console.log(repeatStringNumTimes("CAR", 5));

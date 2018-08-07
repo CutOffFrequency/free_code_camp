@@ -26,7 +26,6 @@
 
 /* best answer */
 const largestOfFour = mainArray =>
-    mainArray.map( (nestedArr) =>
-        Math.max(...nestedArr) )
+  mainArray.map(nestedArr => Math.max(...nestedArr));
 
-console.log( largestOfFour( [ [1,2],[2,3],[3,4],[4,5] ] ) )
+console.log(largestOfFour([[1, 2], [2, 3], [3, 4], [4, 5]]));
